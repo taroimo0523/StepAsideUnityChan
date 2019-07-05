@@ -34,8 +34,11 @@ public class ItemGnerator : MonoBehaviour {
         //UnitychanのGameojectを取得
         GameObject player = GameObject.Find("unitychan");
 
+
+        //ゴールギリギリまでアイテムが生成されないように条件を指定
         if (player.transform.position.z < 50)
         {
+            //unitychanの初期位置よりunitychanの現在地のz軸が大きい時にアイテムを生成する
             if (playerPos < player.transform.position.z)
             {
 
@@ -76,6 +79,7 @@ public class ItemGnerator : MonoBehaviour {
                     }
 
                 }
+                //unitychanの初期位置に15メートル加算、15mおきにアイテムが生成される。
                 playerPos += 15;
 
             }
